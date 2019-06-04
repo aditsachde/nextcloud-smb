@@ -5,6 +5,6 @@ workflow "Rebuild nextcloud-smb every other day" {
 
 action "Dockerhub build webhook" {
   uses = "swinton/httpie.action@8ab0a0e926d091e0444fcacd5eb679d2e2d4ab3d"
-  args = "[\"POST\", $WEBHOOK]"
+  args = "["POST", $WEBHOOK]"
   secrets = ["WEBHOOK"]
 }
